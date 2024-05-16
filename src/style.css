@@ -1,0 +1,116 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font: inherit;
+}
+
+/* Make sure textarea without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+:root {
+
+  /* Color Variables */
+  --clr-primary: oklch(60.7% 0.215 275.6); /* Primary color */
+  --clr-brand: oklch(32.05% 0.041 246.65); /* Brand color  */
+  --clr-accent: oklch(55.73% 0.222 274.27); /* Accent color */
+  --clr-text: oklch(100% 0 0 / 87%); /* Main text color */
+  --clr-background: oklch(26.03% 0 0) ; /* Background color */
+
+  /* Font Weight Variables */
+  --fw-normal: 400; /* Normal font weight */
+  --fw-medium: 500; /* Medium font weight */
+  --fw-bold: 700; /* Bold font weight */
+
+  /* Font Size Variables */
+  --fs-small: 0.8rem; /* Small font size */
+  --fs-normal: 1rem; /* Normal font size */
+  --fs-large: 1.25rem; /* Large font size */
+  --fs-xlarge: 2rem; /* Extra large font size */
+
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: var(--fw-normal);
+
+  color: var(--clr-text);
+  background-color: var(--clr-background);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: var(--fw-medium);
+  color: var(--clr-primary);
+  text-decoration: inherit;
+}
+a:hover {
+  color: var(--clr-accent);
+}
